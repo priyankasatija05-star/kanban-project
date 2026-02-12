@@ -5,8 +5,7 @@ steps:
       - 'build'
       - '-t'
       - 'asia-south1-docker.pkg.dev/ancient-ship-484917-e5/kanban-project/frontend:latest'
-      - '-f'
-      - 'Dockerfile'
+      - '.'
     
 
   - name: 'gcr.io/cloud-builders/docker'
