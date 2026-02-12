@@ -7,7 +7,7 @@ const SignUp = () => {
   const [password, setPassword] = useState("");
   const [notify, setNotify] = useState(false);
 
-  const handleSignup = async (e) => {
+  const handleSignup = async (e:any) => {
     e.preventDefault();
 
     try {
@@ -15,10 +15,10 @@ const SignUp = () => {
       setNotify(true);
       toast(data?.message);
     } catch (err) {
-      const errorMessage =
-        err?.response?.data?.message || err?.message || "Something went wrong";
-      setNotify(true);
-      toast(errorMessage);
+      // const errorMessage =
+      //   err?.response?.data?.message || err?.message || "Something went wrong";
+      // setNotify(true);
+      // toast(errorMessage);
     }
   };
 

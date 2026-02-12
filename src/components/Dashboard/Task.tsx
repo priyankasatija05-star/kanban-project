@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import {  RootState } from "../../store";
 import TaskCard from "./TaskCard";
 
-const Task = ({boundary,boundaryRef,status }) => {
+const Task = ({boundaryRef,status }:any) => {
 
 const tasks = useSelector((state: RootState) => state.getTask.tasks);
 const filteredTasks = tasks.filter(

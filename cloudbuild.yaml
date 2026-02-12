@@ -1,19 +1,4 @@
 steps:
-  # Build backend
-  - name: 'gcr.io/cloud-builders/docker'
-    args:
-      - 'build'
-      - '-t'
-      - 'asia-south1-docker.pkg.dev/ancient-ship-484917-e5/my-repo/backend:latest'
-      - '-f'
-      - 'kanban-BE/Dockerfile'
-      - 'kanban-BE'
-
-  - name: 'gcr.io/cloud-builders/docker'
-    args:
-      - 'push'
-      - 'asia-south1-docker.pkg.dev/ancient-ship-484917-e5/kanban-project/backend:latest'
-
   # Build frontend
   - name: 'gcr.io/cloud-builders/docker'
     args:

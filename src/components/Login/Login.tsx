@@ -13,7 +13,7 @@ const Login = () => {
   const [notify, setNotify] = useState(false);
   const navigate = useNavigate();
   const dispatch: AppDispatch = useDispatch();
-  const handleSignup = async (e) => {
+  const handleSignup = async (e:any) => {
     e.preventDefault();
 
     try {
@@ -23,10 +23,10 @@ const Login = () => {
       navigate("/dashboard")
    
     } catch (err) {
-      const errorMessage =
-        err?.response?.data?.message || err?.message || "Something went wrong";
-      setNotify(true);
-      toast(errorMessage);
+      // const errorMessage =
+      //   err?.response?.data?.message || err?.message || "Something went wrong";
+      // setNotify(true);
+      // toast(errorMessage);
     }
   };
 

@@ -40,7 +40,7 @@ const Dashboard = () => {
   const [description, setDescription] = useState<string>("todo");
   const [status, setStatus] = useState("");
   const dispatch: AppDispatch = useDispatch();
-  const handleChange = (event) => {
+  const handleChange = (event:any) => {
     console.log('status in on change', status)
     setStatus(event.target.value);
   };
@@ -82,7 +82,7 @@ try {
   const handleClose = () => {
     setCreateTask(false);
   };
-  const getDescription = (e) => {
+  const getDescription = (e:any) => {
     setDescription(e.target.value);
   };
   const STATUS_MAP = {
@@ -133,7 +133,7 @@ try {
             {title.map((title, index) => (
               <Grid key={index} size={{ xs: 4, sm: 4, md: 4 }}>
                 <Item sx={{ fontWeight: "bold", fontSize: 25 }}>{title}</Item>
-                <Task boundary=".dashboard-boundary" boundaryRef=".dashboard-boundary" status={STATUS_MAP[title]}/>
+                <Task boundaryRef=".dashboard-boundary" status={STATUS_MAP[title as keyof typeof STATUS_MAP]}/>
               </Grid>
             ))}
           </Grid>

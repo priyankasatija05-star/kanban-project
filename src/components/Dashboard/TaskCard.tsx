@@ -3,7 +3,7 @@ import MainCard from "../common/MainCard";
 import Draggable from "react-draggable";
 import { useRef } from "react";
 
-const TaskCard = ({ task, boundary, index }) => {
+const TaskCard = ({ task, boundary, index }:any) => {
   const nodeRef = useRef<HTMLDivElement>(null);
 
   return (
