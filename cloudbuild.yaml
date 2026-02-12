@@ -4,14 +4,14 @@ steps:
     args:
       - 'build'
       - '-t'
-      - 'asia-south1-docker.pkg.dev/ancient-ship-484917-e5/kanban-project/frontend:latest'
+      - 'us-central1-docker.pkg.dev/ancient-ship-484917-e5/kanban-project/frontend:latest'
       - '.'
     
 
   - name: 'gcr.io/cloud-builders/docker'
     args:
       - 'push'
-      - 'asia-south1-docker.pkg.dev/ancient-ship-484917-e5/kanban-project/frontend:latest'
+      - 'us-central1-docker.pkg.dev/ancient-ship-484917-e5/kanban-project/frontend:latest'
 
   # Deploy to GKE
   - name: 'gcr.io/cloud-builders/kubectl'
