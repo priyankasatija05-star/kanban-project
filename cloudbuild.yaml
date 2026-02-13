@@ -20,8 +20,9 @@ steps:
       - '-f'
       - 'k8s/'
     env:
-      - 'CLOUDSDK_COMPUTE_REGION=asia-south1'
-      - 'CLOUDSDK_CONTAINER_CLUSTER=my-gke-cluster'
+     - 'CLOUDSDK_COMPUTE_REGION=us-central1-a'
+     - 'CLOUDSDK_CONTAINER_CLUSTER=kanban-project'
+     - 'CLOUDSDK_CORE_PROJECT=ancient-ship-484917-e5'
 
 options:
   logging: CLOUD_LOGGING_ONLY
