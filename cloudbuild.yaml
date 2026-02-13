@@ -18,7 +18,7 @@ steps:
     args:
       - 'apply'
       - '-f'
-      - 'k8s/'
+      - 'deployment.yml'
     env:
      - 'CLOUDSDK_COMPUTE_REGION=us-central1-a'
      - 'CLOUDSDK_CONTAINER_CLUSTER=kanban-project'
